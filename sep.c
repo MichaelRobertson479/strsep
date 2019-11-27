@@ -22,17 +22,11 @@ char ** parse_args (char * line) {
 
 int main() {
 
-    char string[100] = "ls -a -l c e";
+    char string[100] = "ls -a -l";
 
     char ** args = parse_args(string);
 
-    int i = 0;
-
-    for (i = 0; i < 6; i++) {
-        printf("%s\n",args[i]);
-    }
-
-    //execvp(args[0],args);
+    execvp(args[0],args);
 
     return 0;
 }
