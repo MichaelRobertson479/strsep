@@ -12,7 +12,7 @@ char ** parse_args (char * line) {
         printf("%s\n",line);
         array[i] = strsep(&line, " ");
     }
-
+    printf("segfault?\n");
     array[5] = NULL;
    
    return array;
