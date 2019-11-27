@@ -21,6 +21,7 @@ char ** parse_args (char * line) {
         i++;
     }
     array[i] = NULL;
+    printf("reach here?\n");
    
    return array;
 }
