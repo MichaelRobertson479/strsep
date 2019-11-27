@@ -4,13 +4,13 @@
 
 char ** parse_args (char * line) {
 
-    char ** array[6];
+    char * array[6];
     int i = 0;
 
     for (i = 0; i < 5; i++) {
 
         printf("%s\n",line);
-        array[i] = &strsep(&line, " ");
+        array[i] = strsep(&line, " ");
     }
 
     array[5] = NULL;
