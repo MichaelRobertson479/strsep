@@ -4,16 +4,23 @@
 
 char ** parse_args (char * line) {
 
+    //debug
+    printf("%s\n",line);
+
     char * array[6];
+    char * token = strsep(&line, " ");
     int i = 0;
 
-    for (i = 0; i < 5; i++) {
+    while(token != NULL) {
 
+        //debug
         printf("%s\n",line);
-        array[i] = strsep(&line, " ");
+
+        array[i] = token;
+        token = strsep(&line, " ");
+        i++;
     }
-    printf("segfault?\n");
-    array[5] = NULL;
+    array[i] = NULL;
    
    return array;
 }
