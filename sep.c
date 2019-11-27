@@ -27,7 +27,7 @@ char ** parse_args (char * line) {
 
 int main() {
 
-    char * string = "ls -l -a apple";
+    char string[100] = "ls -a -l";
 
     parse_args(string);
 
