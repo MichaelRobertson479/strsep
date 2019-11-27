@@ -14,7 +14,7 @@ char ** parse_args (char * line) {
     while(token != NULL) {
 
         //debug
-        printf("%s\n",line);
+        //printf("%s\n",line);
 
         array[i] = token;
         token = strsep(&line, " ");
