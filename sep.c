@@ -5,7 +5,7 @@
 
 char ** parse_args (char * line) {
 
-    char * array[6];
+    char ** array = malloc(6 * sizeof(char *));
     char * token = strsep(&line, " ");
     int i = 0;
 
