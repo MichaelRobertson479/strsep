@@ -26,6 +26,12 @@ int main() {
 
     char ** args = parse_args(string);
 
+    int i = 0;
+
+    for (i = 0; i < 2; i++) {
+        printf("%s\n",args[i]);
+    }
+
     execvp(args[0],args);
 
     return 0;
